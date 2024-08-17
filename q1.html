@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[7,3,230,11,17];
+f=0;m=0;f_p=0;m_p=0;
+for(i of arr){
+    c=0;
+    for(j=2;j<i;j++){
+        if(i%j==0){
+            c++;
+            break;
+        }
+    }
+    if(c>0){
+        if(f==0){
+            m=i;
+            f++;
+        }
+        if(i>m){
+            m=i;
+        }
+    }
+    if(c==0){
+        if(f_p==0){
+            m_p=i;
+            f_p++;
+        }
+       if(i<m_p){
+            m_p=i;
+        }
+    }
+}
+console.log(m_p+m);
+    </script>
+</body>
+</html>
